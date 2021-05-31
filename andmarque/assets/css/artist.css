@@ -1,0 +1,762 @@
+@charset "utf-8";
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Nanum Myeongjo', serif;
+}
+#wrap{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  display:flex;
+  background:#ff3901;
+}
+#wrap section{
+  min-width:100%;
+  height:auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  overflow:hidden;
+
+}
+
+/*container*/
+.container {
+  width: 94.28%;
+  height: 85.33%;
+  box-sizing: border-box;
+}
+/*row: section에 들어가는 default값*/
+.row {
+  width: 94.28%;
+  height: inherit;
+  margin: 0 auto;
+}
+/*layout*/
+#fixed {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#section1{
+  background:#fff;
+
+}
+#section2{
+  background:#fff;
+
+}
+#section3{
+  background:#fff;
+
+}
+#section4{
+  background:#fff;
+
+}
+#section5{
+  position:relative;
+
+}
+
+/*fixed*/
+.fixed {
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.fixed .upside {
+  position: relative;
+  width: 100%;
+  height:38px;
+  line-height: 38px;
+}
+
+.fixed .upside .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.fixed .upside .logo h1 a {
+  color: #ff3901;
+  font-weight: 800;
+  font-size: 26px;
+}
+
+.fixed .upside>div {}
+
+.fixed .upside .nav {
+  display: inline-block;
+  margin-left: 26.92vw;
+}
+
+.fixed .upside .nav ul {}
+
+.fixed .upside .nav ul li {
+  float: left;
+  margin-right: 7.64vw;
+  position: relative;
+}
+
+.fixed .upside .nav ul li:last-child {
+  margin-right: 0;
+}
+
+.fixed .upside .nav ul li span {
+  vertical-align: -3px;
+  font-size: 15px;
+}
+
+.fixed .upside .nav ul li a {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #ff3901;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.fixed .upside .nav ul li.active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -6px;
+  bottom: 18px;
+  width: 70px;
+  height: .7px;
+  background: #ff3901;
+}
+
+.fixed .upside .lang {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor:pointer;
+}
+
+.fixed .upside .lang span {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14.3px;
+  position: relative;
+  color: #ff3901;
+}
+
+.fixed .upside .lang span.active:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  height: .7px;
+  background: #ff3901;
+}
+
+.fixed .upside .lang span:last-child {
+  margin-left: 2.6vw;
+}
+
+/*.fixed #ham*/
+.fixed .upside #ham {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  /* background:#ccc; */
+}
+
+.fixed .upside #ham span {
+  width: 100%;
+  height: 3px;
+  background: #ff3901;
+  display: block;
+  margin-bottom: 7.5px;
+}
+
+
+#fixed #ham_menu{
+  position:absolute;
+  top:0;
+  right:-60%;
+  z-index:100;
+  width:60%;
+  height:100%;
+  background:#ff3901;
+  padding:30px;
+  display: flex;
+    align-items: center;
+  transition:.3s ease-in;
+}
+#fixed #ham_menu .close{
+  position: absolute;
+  top: 7.335%;
+  right: 30px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+#fixed #ham_menu .close span {
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  display: block;
+  margin-bottom: 7.5px;
+  opacity:1;
+  transition:.3s ease-in-out;
+}
+#fixed #ham_menu .close:hover span:nth-of-type(1) {
+  transform:translateY(15px) rotate(45deg);
+}
+#fixed #ham_menu .close:hover span:nth-of-type(2) {
+  opacity:0;
+}
+#fixed #ham_menu .close:hover span:nth-of-type(3) {
+  transform:translateY(-6px) rotate(135deg);
+}
+
+#fixed #ham_menu ul li{
+  margin-bottom:5%;
+}
+
+#fixed #ham_menu ul li a{
+  position:relative;
+  color:#fff;
+  line-height:1;
+  font-size:8vw;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+  /* transition:.3s ease-in-out; */
+}
+
+#fixed #ham_menu ul li a:after{
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:0;
+  height:3px;
+  background:#fff;
+}
+#fixed #ham_menu ul li a:hover:after{
+  animation:right .5s ease-in forwards;
+}
+@keyframes right{
+  0%{
+    width:0;
+  }
+  100%{
+    width:100%;
+  }
+}
+
+#fixed #ham_menu span.mark{
+  position:absolute;
+  bottom:7.335%;
+  right:20px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+  font-size:12px;
+  color:#fff;
+}
+
+.fixed .downside {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.fixed .downside .sns {
+  display: inline-block;
+}
+
+.fixed .downside .sns ul {
+  display: inline-block;
+}
+
+.fixed .downside .sns ul li {
+  display: inline-block;
+  padding-right: 3.57vw;
+}
+
+.fixed .downside .sns ul li a {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #ff3901;
+}
+
+.fixed .downside .sns ul li a span {
+  vertical-align: -3px;
+  font-size: 15px;
+}
+
+.fixed .downside .mark {
+  float: right;
+}
+
+.fixed .downside .mark span {
+  font-weight: 700;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #ff3901;
+}
+
+/*sec1*/
+.sec1 {
+  color: #ff3902;
+  display: flex;
+  height: 100%;
+}
+
+.sec1 .left {
+  width: 50%;
+  height: 100%;
+}
+
+.sec1 .left .sec1_desc {
+  margin-top: 45vh;
+  position: relative;
+}
+
+.sec1 .left .sec1_desc::before {
+  content: '';
+  position: absolute;
+  top: -1.7vh;
+  left: -2.86vw;
+  width: 36.5vw;
+  height: 3px;
+  background: #ff3902;
+}
+
+.sec1 .left .sec1_desc span {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.28vw;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.sec1 .left .sec1_desc h2 {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 5.1vw;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.sec1 .left .sec1_desc p {
+  margin-top: 3.8vh;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.1vw;
+  font-weight: 400;
+  max-width: 525px;
+}
+
+.sec1 .right {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+.sec1 .right .image {
+  position: relative;
+  height: 100%;
+  margin-left: 5vw;
+}
+
+.sec1 .right .image img {
+  position: absolute;
+  bottom: 0;
+  height: 77%;
+}
+
+/*temp*/
+.sec2,
+.sec3,
+.sec4,
+.sec5,
+.sec6 {
+  width: 100%;
+  height: 100%;
+}
+
+.sec2 .temp,
+.sec3 .temp,
+.sec4 .temp,
+.sec5 .temp,
+.sec6 .temp {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.sec2 .temp li,
+.sec3 .temp li,
+.sec4 .temp li,
+.sec5 .temp li,
+.sec6 .temp li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec2 .temp .left,
+.sec3 .temp .left,
+.sec4 .temp .left,
+.sec5 .temp .left,
+.sec6 .temp .left {
+  width: 50%;
+  height: 100%;
+}
+
+.sec2 .temp .right,
+.sec3 .temp .right,
+.sec4 .temp .right,
+.sec5 .temp .right,
+.sec6 .temp .right {
+  width: 50%;
+  height: 100%;
+}
+
+.sec2 .temp li .actor,
+.sec3 .temp li .actor,
+.sec4 .temp li .actor,
+.sec5 .temp li .actor,
+.sec6 .temp li .actor {
+  width: 31.42vw;
+  height: 32.5vw;
+  box-sizing: border-box;
+}
+
+.sec2 .temp li .actor .act_photo,
+.sec3 .temp li .actor .act_photo,
+.sec4 .temp li .actor .act_photo,
+.sec5 .temp li .actor .act_photo,
+.sec6 .temp li .actor .act_photo {
+  width: 100%;
+  height: 80.88%;
+}
+
+.sec2 .temp li .actor .act_photo img,
+.sec3 .temp li .actor .act_photo img,
+.sec4 .temp li .actor .act_photo img,
+.sec5 .temp li .actor .act_photo img,
+.sec6 .temp li .actor .act_photo img {
+  height: 100%;
+  margin-left: 20px;
+}
+
+.sec2 .temp li .actor .act_desc,
+.sec3 .temp li .actor .act_desc,
+.sec4 .temp li .actor .act_desc,
+.sec5 .temp li .actor .act_desc,
+.sec6 .temp li .actor .act_desc {
+  overflow: hidden;
+  width: 100%;
+  height: 19.12%;
+  border-top: 1px solid #ff3902;
+  position: relative;
+}
+
+.sec2 .temp li .actor .act_desc span,
+.sec3 .temp li .actor .act_desc span,
+.sec4 .temp li .actor .act_desc span,
+.sec5 .temp li .actor .act_desc span,
+.sec6 .temp li .actor .act_desc span {
+  padding-top: 14px;
+  float: left;
+  display: block;
+}
+
+.sec2 .temp li .actor .act_desc .left_desc,
+.sec3 .temp li .actor .act_desc .left_desc,
+.sec4 .temp li .actor .act_desc .left_desc,
+.sec5 .temp li .actor .act_desc .left_desc,
+.sec6 .temp li .actor .act_desc .left_desc {
+  padding-left: 5px;
+  width: 36.5%;
+  height: 100%;
+}
+
+.sec2 .temp li .actor .act_desc .left_desc h4,
+.sec3 .temp li .actor .act_desc .left_desc h4,
+.sec4 .temp li .actor .act_desc .left_desc h4,
+.sec5 .temp li .actor .act_desc .left_desc h4,
+.sec6 .temp li .actor .act_desc .left_desc h4 {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 13.4px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #ff3902;
+  letter-spacing: -1px;
+}
+
+.sec2 .temp li .actor .act_desc .right_desc,
+.sec3 .temp li .actor .act_desc .right_desc,
+.sec4 .temp li .actor .act_desc .right_desc,
+.sec5 .temp li .actor .act_desc .right_desc,
+.sec6 .temp li .actor .act_desc .right_desc {
+  width: 63.5%;
+  height: 100%;
+  padding-left: .4vw;
+}
+
+.sec2 .temp li .actor .act_desc .right_desc h4,
+.sec3 .temp li .actor .act_desc .right_desc h4,
+.sec4 .temp li .actor .act_desc .right_desc h4,
+.sec5 .temp li .actor .act_desc .right_desc h4,
+.sec6 .temp li .actor .act_desc .right_desc h4 {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 13.4px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #ff3902;
+  letter-spacing: -1px;
+}
+
+.sec2 .temp li .actor .act_desc .right_desc div,
+.sec3 .temp li .actor .act_desc .right_desc div,
+.sec4 .temp li .actor .act_desc .right_desc div,
+.sec5 .temp li .actor .act_desc .right_desc div,
+.sec6 .temp li .actor .act_desc .right_desc div {
+  width: 100%;
+}
+
+.sec2 .temp li .actor .act_desc .right_desc div p,
+.sec3 .temp li .actor .act_desc .right_desc div p,
+.sec4 .temp li .actor .act_desc .right_desc div p,
+.sec5 .temp li .actor .act_desc .right_desc div p,
+.sec6 .temp li .actor .act_desc .right_desc div p {
+  width: 50%;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 9.35px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  line-height: 1.5;
+  color: #ff3902;
+  float: left;
+  padding-right: 4px;
+  display: block;
+  box-sizing: border-box;
+}
+
+.sec2 .temp li .actor .act_desc .right_desc div p strong,
+.sec3 .temp li .actor .act_desc .right_desc div p strong,
+.sec4 .temp li .actor .act_desc .right_desc div p strong,
+.sec5 .temp li .actor .act_desc .right_desc div p strong,
+.sec6 .temp li .actor .act_desc .right_desc div p strong {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 9.35px;
+  font-weight: 700;
+}
+
+.sec2 .temp li .actor .act_desc em,
+.sec3 .temp li .actor .act_desc em,
+.sec4 .temp li .actor .act_desc em,
+.sec5 .temp li .actor .act_desc em,
+.sec6 .temp li .actor .act_desc em {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+}
+
+.sec2 .temp li .actor .act_desc em a,
+.sec3 .temp li .actor .act_desc em a,
+.sec4 .temp li .actor .act_desc em a,
+.sec5 .temp li .actor .act_desc em a,
+.sec6 .temp li .actor .act_desc em a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding-top: 14px;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #ff3902;
+  font-size: 12.5px;
+}
+@media(max-width:1440px) {
+  .sec1 .left .sec1_desc p {
+    max-width: 480px;
+  }
+}
+
+@media(max-width:1200px) {
+  .sec1 .left .sec1_desc p {
+    max-width: 400px;
+  }
+
+  .sec2 .temp li .actor .act_desc span,
+  .sec3 .temp li .actor .act_desc span,
+  .sec4 .temp li .actor .act_desc span,
+  .sec5 .temp li .actor .act_desc span,
+  .sec6 .temp li .actor .act_desc span {
+    padding-top: 9px;
+  }
+
+  .sec2 .temp .left,
+  .sec2 .temp .right,
+  .sec3 .temp .left,
+  .sec3 .temp .right,
+  .sec4 .temp .left,
+  .sec4 .temp .right,
+  .sec5 .temp .left,
+  .sec5 .temp .right,
+  .sec6 .temp .left,
+  .sec6 .temp .right {
+    width: 80%;
+  }
+
+  .sec2 .temp li .actor,
+  .sec3 .temp li .actor,
+  .sec4 .temp li .actor,
+  .sec5 .temp li .actor,
+  .sec6 .temp li .actor {
+    height: 38.5vw;
+  }
+
+  .sec2 .temp li .actor .act_desc em a,
+  .sec3 .temp li .actor .act_desc em a,
+  .sec4 .temp li .actor .act_desc em a,
+  .sec5 .temp li .actor .act_desc em a,
+  .sec6 .temp li .actor .act_desc em a {
+    font-size: 11px;
+  }
+
+  .sec2 .temp li .actor .act_desc .left_desc,
+  .sec3 .temp li .actor .act_desc .left_desc,
+  .sec4 .temp li .actor .act_desc .left_desc,
+  .sec5 .temp li .actor .act_desc .left_desc,
+  .sec6 .temp li .actor .act_desc .left_desc {
+    width: 32.5%;
+  }
+
+  .sec2 .temp li .actor .act_desc .right_desc,
+  .sec3 .temp li .actor .act_desc .right_desc,
+  .sec4 .temp li .actor .act_desc .right_desc,
+  .sec5 .temp li .actor .act_desc .right_desc,
+  .sec6 .temp li .actor .act_desc .right_desc {
+    width: 67.5%;
+  }
+
+  .sec2 .temp li .actor .act_desc .right_desc div p,
+  .sec3 .temp li .actor .act_desc .right_desc div p,
+  .sec4 .temp li .actor .act_desc .right_desc div p,
+  .sec5 .temp li .actor .act_desc .right_desc div p,
+  .sec6 .temp li .actor .act_desc .right_desc div p {
+    letter-spacing: -1.5px;
+  }
+
+  .sec2 .temp li .actor .act_desc em a,
+  .sec3 .temp li .actor .act_desc em a,
+  .sec4 .temp li .actor .act_desc em a,
+  .sec5 .temp li .actor .act_desc em a,
+  .sec6 .temp li .actor .act_desc em a{
+    padding-top: 9px;
+  }
+}
+
+
+@media(max-width:1080px) {
+  .sec1 .left .sec1_desc p {
+    max-width: 350px;
+  }
+}
+
+@media(max-width:930px) {
+
+  .sec2 .temp li .actor .act_desc .right_desc,
+  .sec3 .temp li .actor .act_desc .right_desc,
+  .sec4 .temp li .actor .act_desc .right_desc,
+  .sec5 .temp li .actor .act_desc .right_desc,
+  .sec6 .temp li .actor .act_desc .right_desc {
+    display: none;
+  }
+
+  .sec2 .temp li .actor,
+  .sec3 .temp li .actor,
+  .sec4 .temp li .actor,
+  .sec5 .temp li .actor,
+  .sec6 .temp li .actor {
+    height: 50vw;
+  }
+
+  .sec2 .temp li .actor .act_desc .left_desc,
+  .sec3 .temp li .actor .act_desc .left_desc,
+  .sec4 .temp li .actor .act_desc .left_desc,
+  .sec5 .temp li .actor .act_desc .left_desc,
+  .sec6 .temp li .actor .act_desc .left_desc {
+    width: 50%;
+  }
+
+  .sec2 .temp li .actor .act_photo img,
+  .sec3 .temp li .actor .act_photo img,
+  .sec4 .temp li .actor .act_photo img,
+  .sec5 .temp li .actor .act_photo img,
+  .sec6 .temp li .actor .act_photo img {
+    margin-left: 0px;
+  }
+
+  .temp li .actor .act_photo {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media(max-width:900px) {
+  .sec1 .left .sec1_desc p {
+    max-width: 250px;
+  }
+
+}
+
+@media(max-width:800px) {
+  .fixed .upside .lang {
+    display: none;
+  }
+
+  .fixed .upside .nav {
+    display: none;
+  }
+
+  .fixed .upside #ham {
+    display: block;
+  }
+
+
+  @media(max-width:680px) {
+    .sec1 .left .sec1_desc p {
+      max-width: 180px;
+    }
+
+    .sec2 .temp li .actor .act_desc .left_desc h4,
+    .sec3 .temp li .actor .act_desc .left_desc h4,
+    .sec4 .temp li .actor .act_desc .left_desc h4,
+    .sec5 .temp li .actor .act_desc .left_desc h4,
+    .sec6 .temp li .actor .act_desc .left_desc h4 {
+      font-size: 12px;
+      letter-spacing: -1.5px;
+    }
+
+    .sec2 .temp li .actor .act_desc .left_desc,
+    .sec3 .temp li .actor .act_desc .left_desc,
+    .sec4 .temp li .actor .act_desc .left_desc,
+    .sec5 .temp li .actor .act_desc .left_desc,
+    .sec6 .temp li .actor .act_desc .left_desc {
+      width: 70%;
+    }
+  }
+
+  @media(max-width:600px) {}

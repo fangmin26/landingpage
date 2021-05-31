@@ -1,0 +1,255 @@
+@charset 'UTF-8';
+/* Slider */
+.slick-loading .slick-list
+{
+    background: #fff url('./ajax-loader.gif') center center no-repeat;
+}
+
+/* Icons */
+@font-face
+{
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('./fonts/slick.eot');
+    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+}
+
+/* Arrows */
+
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    top: 50%;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus
+{
+    color: transparent;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+{
+    opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+{
+    opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+
+    opacity: .75;
+    color: white;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev
+{
+    left: 25px;
+    z-index:1003;
+}
+[dir='rtl'] .slick-prev
+{
+    right: -25px;
+    left: auto;
+}
+.slick-prev:before
+{
+    content: '←';
+}
+[dir='rtl'] .slick-prev:before
+{
+    content: '→';
+}
+
+.slick-next
+{
+    right: 25px;
+    z-index:1003;
+}
+[dir='rtl'] .slick-next
+{
+    right: auto;
+    left: -25px;
+}
+.slick-next:before
+{
+    content: '→';
+}
+[dir='rtl'] .slick-next:before
+{
+    content: '←';
+}
+
+/* Dots */
+.slick-dotted.slick-slider
+{
+    margin-bottom: 30px;
+}
+
+.slick-dots
+{
+    position: absolute;
+    bottom:154px;
+    z-index:1000;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+@media(max-width:1024px){
+    .slick-dots{bottom:25px;text-align:right;}
+
+    }
+
+.slick-dots li
+{
+    display: inline-block;
+
+    width: 300px;
+
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+@media(max-width:1024px){
+.slick-dots li.slick-active button{
+    background:#e75300;
+}
+}
+@media(max-width:1024px){
+    .slick-dots li{width:40px;}
+
+    }
+.slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+@media(max-width:1024px){
+    .slick-dots li button{
+        background:#ccc; border-radius:50%;
+        width:14px;height:14px;
+
+    }
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1;
+}
+
+.slick-dots li button:before
+{
+    font-family: '맑은고딕';
+    font-size: 15px;
+    line-height: 20px;
+    font-weight:600;
+
+    position: absolute;
+    top:114px;
+    right: 0;
+    padding:25px;
+    text-align:left;
+    width: 300px;
+    height: 70px;
+
+    content: '';
+    
+
+    background:#000;
+    color: #fff;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@media(max-width:1024px){
+    .slick-dots li button::before{
+        display:none;
+        
+    }
+}
+.slick-dots li:first-child button::before{
+    content: "01\Aα1\A디지털 언패킹";
+  white-space:pre;
+    right:600px;
+}
+
+.slick-dots li:nth-child(2) button::before{
+    content:"02\A작품을 완성하다\A정품등록";
+    white-space:pre;
+    right:300px;
+}
+
+.slick-dots li:last-child button::before{
+    content:"03\A퀄리티를 더하다\A정품등록";
+    white-space:pre;
+    right:0;
+}
+
+.slick-dots li.slick-active button:before
+{
+
+    background-color:#e75300;
+
+}

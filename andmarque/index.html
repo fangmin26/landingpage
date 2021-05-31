@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANDMARQ</title>
+  <!--webfont-->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gentium+Basic:wght@400;700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+
+  <!--icon-->
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <!--css,nomalize-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/index.css">
+</head>
+
+<body>
+  <div id="scroll">0</div>
+  <section id="fixed">
+    <div class="container">
+      <div class="fixed">
+        <div class="upside clearfix">
+          <div class="logo">
+            <h1><a href="index.html">ANDMARQ</a></h1>
+          </div>
+          <div class="nav">
+            <ul class="clearfix">
+              <li><a href="about.html" target="_blank">ABOUT
+                  <span class="material-icons">arrow_drop_down</span></a>
+              </li>
+              <li><a href="artist.html" target="_blank">ARTIST
+                  <span class="material-icons">arrow_drop_down</span></a>
+              </li>
+              <li><a href="studio.html" target="_blank">STUDIO
+                  <span class="material-icons">arrow_drop_down</span></a>
+              </li>
+              <li><a href="audition.html" target="_blank">AUDITION
+                  <span class="material-icons">arrow_drop_down</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="lang">
+            <span>KR</span>
+            <span>CN</span>
+          </div>
+          <div id="ham">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="downside">
+          <div class="sns">
+            <ul>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Youtube</a></li>
+              <li><a href="#">Family Site
+                  <span class="material-icons">
+                    arrow_drop_down</span>
+                </a></li>
+            </ul>
+          </div>
+          <div class="mark">
+            <span>@ANDMARQ</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="ham_menu">
+      <div class="close">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="artist.html">ARTIST</a></li>
+        <li><a href="studio.html">STUDIO</a></li>
+        <li><a href="audition.html">AUDITION</a></li>
+      </ul>
+      <span class="mark">@ANDMARQ</span>
+    </div>
+  </section>
+  <!--//fixed-->
+  <div id="wrap" data-0="transform:translateX(0%)" data-2000="transform:translateX(-400%)">
+    <section id="section1">
+      <div class="sec1">
+        <span class="front_let">AND</span>
+        <span class="back_let">MARQ</span>
+        <div class="circle">
+          <span class="circle2"></span>
+          <span class="circle3"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+    </section>
+    <!--//section1-->
+    <section id="section2">
+      <div class="back_img_wrap">
+        <div class="back_img first"></div>
+      </div>
+      <div class="row">
+        <div class="sec2">
+          <h2>About</h2>
+          <h3>Introduction</h3>
+        </div>
+      </div>
+    </section>
+    <!--//section2-->
+    <section id="section3">
+      <div class="back_brown"></div>
+      <div class="back_artist"></div>
+      <div class="row">
+        <div class="sec3">
+          <h3>Make <em>artist</em><br /> who act based.</h3>
+        </div>
+      </div>
+    </section>
+    <!--//section3-->
+    <section id="section4">
+      <div class="back_img_wrap">
+        <div class="back_img second"></div>
+      </div>
+
+      <div class="row">
+        <div class="sec4">
+          <h2>Studio</h2>
+          <h3>Work Pieces</h3>
+        </div>
+      </div>
+    </section>
+    <!--//section4-->
+    <section id="section5">
+      <div class="back_red"></div>
+      <div class="back_artist"></div>
+      <div class="row">
+        <div class="sec5">
+          <h3>This <em>audition</em><br /> is open to.</h3>
+        </div>
+      </div>
+    </section>
+    <!--//section5-->
+  </div>
+  <!--//wrap-->
+  <!--script-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="assets/js/index.js"></script>
+
+</body>
+
+</html>
